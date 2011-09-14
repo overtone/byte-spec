@@ -1,4 +1,4 @@
-(ns byte-spec
+(ns overtone.byte-spec
   (:import (java.net URL)
      (java.io FileInputStream FileOutputStream
               DataInputStream DataOutputStream
@@ -9,8 +9,8 @@
 ; Look at synthdef.clj that defines the format for SuperCollider
 ; synthesizer definition (.scsyndef) files for an example of usage.
 
-(def *spec-out* nil)
-(def *spec-in*  nil)
+(def ^{:dynamic true} *spec-out* nil)
+(def ^{:dynamic true} *spec-in*  nil)
 
 (defn- bytes-to-int [bytes]
   (-> bytes (ByteArrayInputStream.) (DataInputStream.) (.readInt)))
@@ -207,4 +207,3 @@
 
 (defn bytes-and-back [spec obj]
   (spec-read-bytes spec (spec-write-bytes spec obj)))
-
