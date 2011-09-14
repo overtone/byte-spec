@@ -1,0 +1,17 @@
+.cake
+*.swp
+*.swo
+*.class
+*.scsyndef
+session
+checkouts
+autodoc
+lib
+native
+\#*#
+\.\#*
+*.log
+*.tmproj
+.DS_Store
+pom.xml
+*.jar
